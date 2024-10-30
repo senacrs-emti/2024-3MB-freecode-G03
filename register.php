@@ -48,7 +48,7 @@
         </form>
         
         <!-- Link para login -->
-        <p class="login-link">Já tem uma conta? <a href="login.html">Entre</a>.</p>
+        <p class="login-link">Já tem uma conta? <a href="login.php">Entre</a>.</p>
     </div>
 </body>
 </html>

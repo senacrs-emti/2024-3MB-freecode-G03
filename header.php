@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="PT-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Bem Estar</title>
-</head>
-
-<body>
-    <!--INICIO DO CABEÇALHO-->
-    <header>
+   <!--INICIO DO CABEÇALHO-->
+   <header>
         <div class="logo">
             <h1>IA do Bem-estar</h1>
         </div>
@@ -28,25 +17,14 @@
         </div>
         <!--ESSA AQUI É  O FIM DA NAVBAR COM A BARRA DE PESQUISA-->
     </header>
-    <!--FIM DO CABEÇALHO-->
-
-
-    <main>
-       <section class="login">
+    <section class="login">
         <div class="linha">
             
         </div>
         <div class="botao-de-login">
             <ion-icon name="person-outline"></ion-icon>
-            <a href="register.html">FAÇA SEU LOGIN OU CADESTRE-SE</a>
+            <a href="register.php">FAÇA SEU LOGIN OU CADESTRE-SE</a>
         </div>
         
        </section> 
-    </main>
-
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-
-</html>
+    <!--FIM DO CABEÇALHO-->

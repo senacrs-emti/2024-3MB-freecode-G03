@@ -305,3 +305,66 @@ form input[type="password"] {
     background-color: #F39C12;
 }
 /* FIM  DO CSS LOGIN.HTML*/
+
+/* Container */
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem apenas quando necessário */
+    justify-content: space-around;
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px;
+}
+
+/* Cards */
+.card {
+    flex: 1 1 200px; /* Largura mínima de 200px, ajustável conforme o espaço */
+    max-width: 300px; /* Limita a largura dos cards */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Cores dos cards */
+.card-fisico {
+    background-color: #A85D00;
+}
+
+.card-mental {
+    background-color: #FFAA00;
+}
+
+.card-ingesta {
+    background-color: #FFD700;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        justify-content: center;
+    }
+}
