@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     font-size: 26px;
     margin: 0;
@@ -7,11 +6,14 @@
     box-sizing: border-box;
     font-family: "Jersey 10", serif;
 }
-html{
+
+html {
     background-color: black;
 }
 
+
 /*INICIO DA ESTILIZAÇÃO DO CABEÇALHO*/
+
 header {
     background: linear-gradient(#4F0404, #B50909);
     width: 100%;
@@ -19,7 +21,6 @@ header {
     display: flex;
     justify-content: space-around;
     color: white;
-    
 }
 
 header .logo h1 {
@@ -29,16 +30,12 @@ header .logo h1 {
 header .navegacao {
     display: flex;
     flex-direction: column;
-
-
 }
 
 header .barra-de-pesquisa {
     background-color: white;
     border-radius: 26px;
     margin-bottom: 1.2rem;
-
-
 }
 
 header .navegacao input {
@@ -47,14 +44,10 @@ header .navegacao input {
     border-radius: 26px;
     padding: 10px;
     color: black;
-
-
 }
 
 header .navegacao .barra-de-pesquisa ion-icon {
     color: black;
-
-
 }
 
 header .navegacao nav {
@@ -67,87 +60,107 @@ header .navegacao nav {
 }
 
 header .navegacao nav a {
-
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
     text-decoration: none;
-
-
 }
+
 
 /*FIM DA ESTILIZAÇÃO DO CABEÇALHO*/
 
+
 /*INICIO DA EDIÇÃO DO MAIN*/
-main{
+
+main {
     width: 100%;
     height: 100%;
 }
+
+
 /*INICIO EDIÇÃO DO BOTÃO DO  LOGIN NA INDEX*/
-.login{
+
+.login {
     margin-top: 40px;
 }
-.linha{
-    width:100%;
+
+.linha {
+    width: 100%;
     height: 10px;
     background-color: white;
-    
 }
-.botao-de-login{
+
+
+/* Estilização do botão de login */
+
+.botao-de-login {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     width: 210px;
+    /* Ajusta a largura */
     height: 56px;
     border-radius: 15px;
     background: #B50909;
+    /* Cor mais viva para destaque */
     position: relative;
     right: -80%;
+    /* Ajusta a posição */
     top: -30px;
+    transition: background-color 0.3s, transform 0.3s;
 }
-.botao-de-login a{
+
+.botao-de-login:hover {
+    background-color: #F39C12;
+    /* Cor para hover */
+    transform: scale(1.05);
+    /* Efeito de zoom leve ao passar o mouse */
+}
+
+.botao-de-login a {
     text-align: center;
     text-decoration: none;
     font-size: 24px;
     color: white;
+    /* Fonte alternativa */
 }
-.botao-de-login  ion-icon{
+
+.botao-de-login ion-icon {
     width: 46px;
+    /* Ajusta o tamanho do ícone */
     height: 46px;
-    
 }
+
+
 /*FIM EDIÇÃO DO BOTÃO DO LOGIN NA INDEX*/
+
 
 /*FIM DA EDIÇÃO DO MAIN*/
 
 
-
 /*INICIO DO CSS DA TELA DO REGISTER.CSS*/
+
+
 /* Estilo do container principal */
-.container {
-    width: 390px;
-    background-color: #562D1A; /* Marrom escuro */
-    color: #FFF;
-    padding: 20px;
-    margin: 50px auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
+
 
 /* Título */
+
 .title {
-    background-color: #D35400; /* Laranja escuro */
+    background-color: #D35400;
+    /* Laranja escuro */
     padding: 10px;
     border-radius: 4px;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
+
 /* Estilo dos campos de input */
+
 form label {
     display: block;
     text-align: left;
@@ -173,7 +186,9 @@ form input[type="password"] {
     font-size: 22px;
 }
 
+
 /* Estilo dos botões de gênero */
+
 .gender-options {
     display: flex;
     justify-content: space-between;
@@ -190,12 +205,17 @@ form input[type="password"] {
     transition: background-color 0.3s;
 }
 
+
 /* Efeito ao selecionar o gênero */
-input[type="radio"]:checked + .gender-button {
-    background-color: #F39C12; /* Cor de destaque ao selecionar */
+
+input[type="radio"]:checked+.gender-button {
+    background-color: #F39C12;
+    /* Cor de destaque ao selecionar */
 }
 
+
 /* Botão de cadastro */
+
 .submit-button {
     width: 100%;
     padding: 10px;
@@ -208,12 +228,16 @@ input[type="radio"]:checked + .gender-button {
     transition: background-color 0.3s;
 }
 
+
 /* Efeito de hover no botão */
+
 .submit-button:hover {
     background-color: #F39C12;
 }
 
+
 /* Link para login */
+
 .login-link {
     font-size: 14px;
     margin-top: 10px;
@@ -227,14 +251,20 @@ input[type="radio"]:checked + .gender-button {
 .login-link a:hover {
     text-decoration: underline;
 }
+
+
 /*FIM DO CSS DA TELA DO REGISTER.CSS*/
 
 
 /* INICIO DO CSS LOGIN.HTML*/
+
+
 /* Container do formulário de login */
+
 .login-container {
     width: 350px;
-    background-color: #562D1A; /* Marrom escuro */
+    background-color: #562D1A;
+    /* Marrom escuro */
     color: #FFF;
     padding: 20px;
     margin: 50px auto;
@@ -243,16 +273,21 @@ input[type="radio"]:checked + .gender-button {
     text-align: center;
 }
 
+
 /* Título */
+
 .login-title {
-    background-color: #D35400; /* Laranja escuro */
+    background-color: #D35400;
+    /* Laranja escuro */
     padding: 10px;
     border-radius: 4px;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
+
 /* Estilo dos campos de input */
+
 form label {
     display: block;
     text-align: left;
@@ -272,10 +307,11 @@ form input[type="password"] {
     border-radius: 4px;
     background-color: transparent;
     color: #FFF;
-    
 }
 
+
 /* Campo de senha com ícone */
+
 .password-field {
     display: flex;
     align-items: center;
@@ -287,7 +323,9 @@ form input[type="password"] {
     color: #FFF;
 }
 
+
 /* Botão de login */
+
 .login-button {
     width: 100%;
     padding: 10px;
@@ -300,27 +338,45 @@ form input[type="password"] {
     transition: background-color 0.3s;
 }
 
+
 /* Efeito de hover no botão */
+
 .login-button:hover {
     background-color: #F39C12;
 }
+
+
 /* FIM  DO CSS LOGIN.HTML*/
 
+
 /* Container */
+
+
 /* Container */
+
 .container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os cards quebrem apenas quando necessário */
-    justify-content: space-around;
-    gap: 20px; /* Espaçamento entre os cards */
+    width: auto;
+    background-color: #562D1A;
+    /* Marrom escuro */
+    color: #FFF;
     padding: 20px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    /* Espaça os cards */
+    gap: 30px;
+    padding: 20px;
+    /* Evita quebra de linha nos cards */
 }
 
-/* Cards */
 .card {
-    flex: 1 1 200px; /* Largura mínima de 200px, ajustável conforme o espaço */
-    max-width: 300px; /* Limita a largura dos cards */
-    padding: 20px;
+    flex: 1;
+    max-width: 500px;
+    /* Limita a largura dos cards */
+    padding: 40px;
     border-radius: 10px;
     color: white;
     text-align: center;
@@ -337,19 +393,21 @@ form input[type="password"] {
 }
 
 .card img {
-    width: 80px;
+    width: 180px;
     margin-bottom: 10px;
 }
 
 .card p {
-    font-size: 14px;
+    font-size: 24px;
     color: #333;
     background-color: white;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
 }
 
+
 /* Cores dos cards */
+
 .card-fisico {
     background-color: #A85D00;
 }
@@ -362,7 +420,15 @@ form input[type="password"] {
     background-color: #FFD700;
 }
 
+
 /* Responsividade */
+
+@media (max-width:1046) {
+    .login {
+        margin-left: -100px;
+    }
+}
+
 @media (max-width: 600px) {
     .container {
         justify-content: center;
