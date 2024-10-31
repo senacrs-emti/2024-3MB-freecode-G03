@@ -9,9 +9,9 @@
                 <input type="text" class="pesquisar"><ion-icon name="search-outline"></ion-icon>
             </div>
             <nav>
-                <a href="">Fisico</a>
-                <a href="">Mental</a>
-                <a href="">Injesta</a>
+                <a href="#">Fisico</a>
+                <a href="#">Mental</a>
+                <a href="#">Injesta</a>
 
             </nav>
         </div>
