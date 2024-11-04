@@ -71,9 +71,11 @@ header .navegacao nav a {
     color: white;
     text-decoration: none;
 }
-header .navegacao nav a:hover{
-text-decoration: underline;
+
+header .navegacao nav a:hover {
+    text-decoration: underline;
 }
+
 
 /*FIM DA ESTILIZAÇÃO DO CABEÇALHO*/
 
@@ -360,14 +362,12 @@ form input[type="password"] {
 
 /* Container */
 
-main .container a{
-text-decoration: none;
+main .container a {
+    text-decoration: none;
 }
-
 
 .container {
     width: auto;
-   
     /* Marrom escuro */
     color: #FFF;
     padding: 20px;
@@ -447,13 +447,13 @@ text-decoration: none;
     }
 }
 
-footer{
+footer {
     width: 100%;
     background-color: #B50909;
     height: 200px;
 }
 
-footer a{
+footer a {
     text-decoration: none;
     color: white;
     position: relative;
@@ -463,6 +463,3 @@ footer a{
 
 
 /*fim footer*/
-
-
-/* 
