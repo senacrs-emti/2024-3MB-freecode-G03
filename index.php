@@ -33,7 +33,7 @@
         </div>
         </a>
         <!-- Card Ingesta -->
-         <a href="#">
+         <a href="ingesta.php">
         <div class="card card-ingesta">
             <h2>INGESTA</h2>
             <img src="img/Ingesta.png" alt="Ícone Ingesta">

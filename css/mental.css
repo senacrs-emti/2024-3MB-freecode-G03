@@ -8,15 +8,19 @@
 
 .categoria {
     width: 80%;
-    max-width: 400px;
+    max-width: 500px;
     padding: 15px;
     color: white;
     font-size: 1.2em;
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
     position: relative;
+    transition: all 0.3s ease;
+}
+
+.categoria p {
+    margin: 0;
 }
 
 .conteudo-expandido {
@@ -26,6 +30,8 @@
     font-size: 0.9em;
     padding: 10px;
     border-radius: 5px;
+    background-color: inherit;
+    /* Usa a mesma cor de fundo do card */
 }
 
 .categoria.expanded .conteudo-expandido {

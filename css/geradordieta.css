@@ -1,0 +1,109 @@
+.gerador-dieta {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.gerador-dieta h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.opcoes-objetivo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.objetivo-ganhar {
+    background-color: #B71C1C;
+    /* Cor para "Ganhar Músculo" */
+    color: white;
+}
+
+.objetivo-perder {
+    background-color: #FFC107;
+    /* Cor para "Fortalecer Músculo" */
+    color: black;
+}
+
+.input-saude {
+    margin: 15px 0;
+    padding: 10px;
+    width: 80%;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.area-dieta {
+    background: linear-gradient(to bottom, #FF8C00, #FF4500);
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    margin-top: 20px;
+}
+
+
+/* Ocultar os checkboxes */
+
+.objetivo-checkbox {
+    display: none;
+}
+
+
+/* Estilos dos botões */
+
+.opcoes-objetivo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+/* Estilos específicos de cada objetivo */
+
+.objetivo-ganhar {
+    background-color: #B71C1C;
+    color: white;
+}
+
+.objetivo-perder {
+    background-color: #FFC107;
+    color: black;
+}
+
+
+/* Estilos para quando o checkbox está marcado */
+
+.objetivo-checkbox:checked+.objetivo-ganhar {
+    background-color: #8B0000;
+    box-shadow: 0px 4px 12px rgba(139, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.objetivo-checkbox:checked+.objetivo-perder {
+    background-color: #FFA000;
+    box-shadow: 0px 4px 12px rgba(255, 160, 0, 0.3);
+    transform: scale(1.05);
+}

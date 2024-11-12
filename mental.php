@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de IMC</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mental.css">
 </head>
 <body>
@@ -16,31 +16,31 @@
         <div class="categoria" style="background-color: #FFD700;" onclick="toggleContent(this)">
             <p>Ansiedade</p>
             <div class="conteudo-expandido">
-                <p>Informações sobre ansiedade, como controlar e técnicas de respiração.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu vehicula risus...</p>
             </div>
         </div>
         <div class="categoria" style="background-color: #FFA500;" onclick="toggleContent(this)">
             <p>Depressão</p>
             <div class="conteudo-expandido">
-                <p>Informações sobre depressão, sinais de alerta e tratamentos.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula malesuada...</p>
             </div>
         </div>
         <div class="categoria" style="background-color: #FF8C00;" onclick="toggleContent(this)">
             <p>Estresse</p>
             <div class="conteudo-expandido">
-                <p>Técnicas de gerenciamento de estresse e dicas para relaxamento.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla vehicula mi...</p>
             </div>
         </div>
         <div class="categoria" style="background-color: #FF4500;" onclick="toggleContent(this)">
             <p>Autocuidado</p>
             <div class="conteudo-expandido">
-                <p>Importância do autocuidado e maneiras de praticá-lo diariamente.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sagittis lorem...</p>
             </div>
         </div>
         <div class="categoria" style="background-color: #FF0000;" onclick="toggleContent(this)">
             <p>Bem-estar emocional</p>
             <div class="conteudo-expandido">
-                <p>Estratégias para manter o bem-estar emocional e estabilidade.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim nunc dictum...</p>
             </div>
         </div>
     </section>
@@ -54,6 +54,7 @@
 </main>
 
 <script>
+
 function toggleContent(card) {
     // Fecha todos os outros cards abertos
     document.querySelectorAll('.categoria.expanded').forEach(function(openCard) {
@@ -63,6 +64,7 @@ function toggleContent(card) {
     // Alterna a expansão do card clicado
     card.classList.toggle('expanded');
 }
+
 </script>
 
 
