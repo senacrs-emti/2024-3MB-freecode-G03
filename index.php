@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Bem Estar</title>
 </head>
 
@@ -25,7 +25,7 @@
         </div>
         </a>
         <!-- Card Mental -->
-         <a href="#">
+         <a href="mental.php">
         <div class="card card-mental">
             <h2>MENTAL</h2>
             <img src="img/Mental.png" alt="Ícone Mental">
