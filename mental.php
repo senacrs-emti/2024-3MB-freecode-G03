@@ -16,31 +16,31 @@
         <div class="categoria" style="background-color: #FFD700;" onclick="toggleContent(this)">
             <p>Ansiedade</p>
             <div class="conteudo-expandido">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu vehicula risus...</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab esse eius quis commodi, repellat repudiandae sed delectus architecto culpa voluptas aliquid voluptatem molestias vero nihil reiciendis sequi! Nam, ad libero!</p>
             </div>
         </div>
         <div class="categoria" style="background-color: #FFA500;" onclick="toggleContent(this)">
             <p>Depressão</p>
             <div class="conteudo-expandido">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula malesuada...</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab esse eius quis commodi, repellat repudiandae sed delectus architecto culpa voluptas aliquid voluptatem molestias vero nihil reiciendis sequi! Nam, ad libero!</p>
             </div>
         </div>
         <div class="categoria" style="background-color: #FF8C00;" onclick="toggleContent(this)">
             <p>Estresse</p>
             <div class="conteudo-expandido">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla vehicula mi...</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab esse eius quis commodi, repellat repudiandae sed delectus architecto culpa voluptas aliquid voluptatem molestias vero nihil reiciendis sequi! Nam, ad libero!</p>
             </div>
         </div>
         <div class="categoria" style="background-color: #FF4500;" onclick="toggleContent(this)">
             <p>Autocuidado</p>
             <div class="conteudo-expandido">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sagittis lorem...</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab esse eius quis commodi, repellat repudiandae sed delectus architecto culpa voluptas aliquid voluptatem molestias vero nihil reiciendis sequi! Nam, ad libero!</p>
             </div>
         </div>
         <div class="categoria" style="background-color: #FF0000;" onclick="toggleContent(this)">
             <p>Bem-estar emocional</p>
             <div class="conteudo-expandido">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim nunc dictum...</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab esse eius quis commodi, repellat repudiandae sed delectus architecto culpa voluptas aliquid voluptatem molestias vero nihil reiciendis sequi! Nam, ad libero!</p>
             </div>
         </div>
     </section>

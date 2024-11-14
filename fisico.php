@@ -20,7 +20,7 @@
             </a>
         </div>
         <div class="menu-item verificador">
-            <a href="verificador.php">
+            <a href="verificadormovimento.php">
             <span><img style="width: 100px; height: 100px;" src="img/halter.png" alt="Ícone de movimento"></span>
             <span class="card-text">Verificador de movimento</span>
             </a>
@@ -32,7 +32,7 @@
             </a>
         </div>
         <div class="menu-item avaliador">
-            <a href="avaliador.php">
+            <a href="avaliadorfisico.php">
         <span><img style="width: 100px; height: 100px;" src="img/shape.png" alt="Ícone de avaliador"></span>
         <span class="card-text">Avaliador de Físico</span>
         </a>

@@ -1,0 +1,74 @@
+body {
+    background-color: #2b2b2b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.diet-button {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background: #EEB108;
+    border-radius: 10px;
+    color: white;
+}
+
+.diet-button a {
+    color: white;
+}
+
+.diet-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.diet-link .icon ion-icon {
+    font-size: 24px;
+}
+
+.diet-generator {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.diet-info {
+    display: flex;
+    align-items: center;
+    background: #DA921E;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.diet-info .pyramid {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.diet-info .pyramid img {
+    max-width: 100%;
+    height: auto;
+}
+
+.diet-info .description {
+    flex: 2;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.health-importance {
+    background-color: #BF6110;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
