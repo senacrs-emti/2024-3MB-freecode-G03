@@ -8,64 +8,33 @@
     <link rel="stylesheet" href="css/imc.css">
 </head>
 <body>
-    <?php include_once "header.php" ?>
+    <?php include_once "header.php"; ?>
     
     <main>
-        <!-- Seção de entrada à esquerda -->
         <div class="input-section">
             <h1>IMC</h1>
             <h3>Informe seu peso em kg:</h3>
-            <input type="text" placeholder="Ex: 70" id="peso">
+            <input type="text" id="peso" class="input-peso" placeholder="Ex: 70">
             
             <h3>Informe a sua altura em metros:</h3>
-            <input type="text" placeholder="Ex: 1.75" id="altura">
+            <input type="text" id="altura" class="input-altura" placeholder="Ex: 1.75">
             
             <h3>Seu resultado:</h3>
             <div class="resultado" id="resultado"><RESULTADO></div>
+            <button id="salvar-imc" class="btn-salvar">Salvar IMC</button>
         </div>
         
-        <!-- Seção de informações à direita -->
         <div class="right-section">
             <div class="info-box">
                 <h4>O que é IMC:</h4>
-                <p>O Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está dentro do peso ideal em relação à sua altura, indicando condições como baixo peso, normal, sobrepeso e obesidade.</p>
-            </div>
-            
-            <div class="imc-tabela">
-                <h4>VALORES DO IMC: PESSOAS DE 20 A 60 ANOS</h4>
-                <table>
-                    <tr>
-                        <th>VALOR DO IMC</th>
-                        <th>CLASSIFICAÇÃO</th>
-                    </tr>
-                    <tr class="baixo-peso">
-                        <td>Menor que 18,5</td>
-                        <td>Baixo peso</td>
-                    </tr>
-                    <tr class="normal">
-                        <td>De 18,5 a 24,99</td>
-                        <td>Normal</td>
-                    </tr>
-                    <tr class="sobrepeso">
-                        <td>De 25 a 29,99</td>
-                        <td>Sobrepeso</td>
-                    </tr>
-                    <tr class="obesidade">
-                        <td>Maior que 30</td>
-                        <td>Obesidade</td>
-                    </tr>
-                </table>
+                <p>O Índice de Massa Corporal (IMC) é uma medida para avaliar se uma pessoa está dentro do peso ideal em relação à sua altura.</p>
             </div>
         </div>
     </main>
-    
-    <?php include_once "footer.php" ?>
-    
+
+    <?php include_once "footer.php"; ?>
+
     <script>
-        // Função para calcular IMC
-        document.getElementById("peso").addEventListener("input", calcularIMC);
-        document.getElementById("altura").addEventListener("input", calcularIMC);
-        
         function calcularIMC() {
             const peso = parseFloat(document.getElementById("peso").value);
             const altura = parseFloat(document.getElementById("altura").value);
@@ -74,10 +43,35 @@
             if (!isNaN(peso) && !isNaN(altura) && altura > 0) {
                 const imc = peso / (altura * altura);
                 resultado.innerHTML = imc.toFixed(2);
+                return imc;
             } else {
                 resultado.innerHTML = "<RESULTADO>";
+                return null;
             }
         }
+
+        document.getElementById("peso").addEventListener("input", calcularIMC);
+        document.getElementById("altura").addEventListener("input", calcularIMC);
+
+        document.getElementById("salvar-imc").addEventListener("click", function() {
+            const imc = calcularIMC();
+            if (imc !== null) {
+                const formData = new FormData();
+                formData.append("peso", document.getElementById("peso").value);
+                formData.append("altura", document.getElementById("altura").value);
+                formData.append("resultado_imc", imc);
+
+                fetch("processar_imc.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => alert("IMC salvo com sucesso!"))
+                .catch(error => console.error("Erro ao salvar IMC:", error));
+            } else {
+                alert("Por favor, insira valores válidos para peso e altura.");
+            }
+        });
     </script>
 </body>
 </html>

@@ -13,7 +13,7 @@
     <main>
     <section class="gerador-treino">
         <h2>Gerador de Treino</h2>
-        
+        <form id="form-treino" action="processar_treino.php" method="POST">
         <p>Escolha o seu objetivo:</p>
         <div class="opcoes-objetivo">
             <label>
@@ -33,6 +33,7 @@
             <h3>Treino</h3>
             <p>Aqui será exibido o treino gerado com base nas suas escolhas.</p>
         </div>
+        <form id="form-treino" action="processar_treino.php" method="POST">
     </section>
 </main>
 
