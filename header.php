@@ -1,7 +1,7 @@
    <!--INICIO DO CABEÇALHO-->
    <header>
         <div class="logo">
-            <h1>IA do Bem-estar</h1>
+           <a  style='color:white;text-decoration:none;'href="index.php"> <h1>IA do Bem-estar</h1></a>
         </div>
         <!--ESSA AQUI É A NAVBAR COM A BARRA DE PESQUISA-->
         <div class="navegacao">
