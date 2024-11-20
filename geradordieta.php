@@ -9,7 +9,8 @@
 </head>
 <body>
     <?php include_once "header.php" ?>
-    
+    <?php include 'middleware.php'; ?>
+
     <main>
     <section class="gerador-dieta">
         <h2>Gerador de Dieta</h2>

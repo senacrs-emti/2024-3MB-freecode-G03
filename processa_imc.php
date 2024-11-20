@@ -11,7 +11,7 @@ if (isset($_POST['peso'], $_POST['altura'], $_POST['resultado_imc'])) {
     
     try {
         // Prepara a consulta para inserir os dados na tabela
-        $sql = "INSERT INTO imc_registros (peso, altura, imc) VALUES (:peso, :altura, :imc)";
+        $sql = "INSERT INTO imc (peso, altura, imc) VALUES (:peso, :altura, :imc)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':peso', $peso);
         $stmt->bindParam(':altura', $altura);

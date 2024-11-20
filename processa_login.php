@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($user && password_verify($senha, $user['senha'])) {
         $_SESSION['user_id'] = $user['id'];
+        $_SESSION['cadastro_completo'] = $user['cadastro_completo'];
         header("Location: dashboard.php");
         exit();
     } else {

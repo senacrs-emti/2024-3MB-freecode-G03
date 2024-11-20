@@ -7,21 +7,19 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-
 <div class="login-container">
     <h2>Login</h2>
+    <form action="processa_login.php" method="POST">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
-    <!-- Campo de e-mail -->
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
-
-    <!-- Campo de senha com ícone -->
-    <label for="password">Senha:</label>
-    <div class="password-field">
-        <img src="icone_cadeado.png" alt="Ícone de cadeado">
-        <input type="password" id="password" name="password" placeholder="Digite sua senha">
-    </div>
+        <label for="password">Senha:</label>
+        <div class="password-field">
+            <img src="icone_cadeado.png" alt="Ícone de cadeado">
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+        </div>
+        <button type="submit">Entrar</button>
+    </form>
 </div>
-
 </body>
 </html>
