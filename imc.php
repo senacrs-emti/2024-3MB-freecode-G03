@@ -27,7 +27,7 @@
         <div class="right-section">
             <div class="info-box">
                 <h4>O que é IMC:</h4>
-                <p>O Índice de Massa Corporal (IMC) é uma medida para avaliar se uma pessoa está dentro do peso ideal em relação à sua altura.</p>
+                <p>Criado no século XIX pelo matemático Lambert Quételet, o Índice de Massa Corporal (IMC) é um cálculo simples que permite medir se alguém está ou não com o peso ideal. O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado</p>
             </div>
         </div>
     </main>
