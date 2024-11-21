@@ -32,7 +32,7 @@
             </a>
         </div>
         <div class="menu-item avaliador">
-            <a href="avaliadorfisico.php">
+            <a href="templates/index.html">
         <span><img style="width: 100px; height: 100px;" src="img/shape.png" alt="Ícone de avaliador"></span>
         <span class="card-text">Avaliador de Físico</span>
         </a>

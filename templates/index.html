@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliador Físico</title>
+    <link rel="stylesheet" href="css/fisico.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+       <!--INICIO DO CABEÇALHO-->
+   <header>
+    <div class="logo">
+       <a  style='color:white;text-decoration:none;'href="index.php"> <h1>IA do Bem-estar</h1></a>
+    </div>
+    <!--ESSA AQUI É A NAVBAR COM A BARRA DE PESQUISA-->
+    <div class="navegacao">
+        <div class="barra-de-pesquisa">
+            <input type="text" class="pesquisar"><ion-icon name="search-outline"></ion-icon>
+        </div>
+        <nav>
+            <a href="fisico.php">Fisico</a>
+            <a href="mental.php">Mental</a>
+            <a href="ingesta.php">Injesta</a>
+
+        </nav>
+    </div>
+    <!--ESSA AQUI É  O FIM DA NAVBAR COM A BARRA DE PESQUISA-->
+</header>
+<main>
+<section class="login">
+    <div class="linha">
+        
+    </div>
+    <div class="botao-de-login">
+        <ion-icon name="person-outline"></ion-icon>
+        <a href="register.php">FAÇA SEU LOGIN OU CADESTRE-SE</a>
+    </div>
+    
+   </section> 
+<!--FIM DO CABEÇALHO-->
+
+    <h1>Avaliador Físico</h1>
+    <p>O sistema irá analisar o vídeo e classificar seu físico visualmente.</p>
+    <div>
+        <img src="{{ url_for('video_feed') }}" alt="Video Stream">
+    </div>
+</main>
+<footer>
+    <nav>
+        <ul>
+            <li><a href="https://github.com/Arthurmp07">ARTHUR MELLO</a></li>
+            <li><a href="https://github.com/GiovanaRossi">GIOVANA ROSSI</a></li>
+            <li><a href="https://github.com/CRUZ1807">HENRIQUE CRUZ</a></li>
+            <li><a href="">JOHANN DA ROSA</a></li>
+        </ul>
+    </nav>
+
+    <img src="#" alt="">
+</footer>
+</body>
+</html>
