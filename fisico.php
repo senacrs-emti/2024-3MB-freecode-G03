@@ -48,7 +48,7 @@
                 <li>Reduz sintomas depressivos; </li>
                 <li>Previne e diminui a mortalidade por doenças crônicas; </li>
                 <li>Melhora a força, equilíbrio e flexibilidade; </li>
-                <li>Proporciona a socialização e a convivência. </li>
+                <li>Proporciona a socialização e a convivência. .</li>
             </ul>
         </div>
     </div>
