@@ -11,7 +11,7 @@
     <?php include_once "header.php"?>
     <div class="container">
         <div class="menu">
-           
+            
             <h2>Selecione uma opção:</h2>
             <div class="menu-item imc">
             <a href="imc.php">
@@ -42,10 +42,13 @@
         <div class="info-box">
             <h3>Motivos pelo qual o exercício físico é importante:</h3>
             <ul>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
+                <li>Reduz o estresse e sintomas de ansiedade;</li>
+                <li>Melhora a qualidade do sono; </li>
+                <li>Melhora a aprendizagem; </li>
+                <li>Reduz sintomas depressivos; </li>
+                <li>Previne e diminui a mortalidade por doenças crônicas; </li>
+                <li>Melhora a força, equilíbrio e flexibilidade; </li>
+                <li>Proporciona a socialização e a convivência. </li>
             </ul>
         </div>
     </div>
