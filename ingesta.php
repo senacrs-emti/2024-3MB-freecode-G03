@@ -27,12 +27,22 @@
                 </div>
                 <div class="description">
                     <h3>Pirâmide Alimentar, o que é:</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu vehicula risus. Fusce vehicula malesuada odio eget euismod.</p>
+                    <p>A pirâmide alimentar é uma representação gráfica que reúne informações importantes a respeito dos grupos de alimentos presentes em nossa dieta. Seu principal objetivo é garantir o bem-estar nutricional da população, informando-a, principalmente, sobre as porções recomendadas de cada tipo de alimento. Na pirâmide alimentar, os alimentos estão dispostos por nível de necessidade (base: maior necessidade/importância e topo: menor importância/necessidade), sendo eles:  
+                        Primeiro nível (base da pirâmide): grupo da água; 
+                        <br>
+                        Segundo nível: grupo dos cereais, tubérculos, raízes; 
+                        <br>
+                        Terceiro nível: grupo das hortaliças e grupo das frutas; 
+                        <br>
+                        Quarto nível: grupo do leite e produtos lácteos, grupo das carnes e ovos, grupo das leguminosas e oleaginosas; 
+                        <br>
+                        Quinto nível (topo da pirâmide): grupo dos óleos e gorduras, grupo dos açúcares e doces.
+                    </p>
                 </div>
             </div>
             <div class="health-importance">
                 <h3>Importância da saúde alimentar:</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu vehicula risus. Fusce vehicula malesuada odio eget euismod.</p>
+                <p>A nutrição faz parte da vida de todo ser humano, com a ingestão de alimentos saudáveis, o corpo recebe os nutrientes, vitaminas e minerais necessários para manter o funcionamento adequado, inclusive prevenindo doenças como obesidade, anemia, diabetes, entre outras. </p>
             </div>
         </section>
     </main>
