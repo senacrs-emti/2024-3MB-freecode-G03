@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu de Opções</title>
-   <link rel="stylesheet" href="css/fisico.css">
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="static/css/fisico.css">
+   <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
     <?php include_once "header.php"?>
@@ -32,7 +32,7 @@
             </a>
         </div>
         <div class="menu-item avaliador">
-            <a href="templates/index.html">
+            <a href="avaliadorfisico.php">
         <span><img style="width: 100px; height: 100px;" src="img/shape.png" alt="Ícone de avaliador"></span>
         <span class="card-text">Avaliador de Físico</span>
         </a>

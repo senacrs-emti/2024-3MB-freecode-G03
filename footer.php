@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="static/css/style.css">
 <footer>
     <nav>
         <ul>

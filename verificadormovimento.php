@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificador de movimento</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/verificadormovimento.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/verificadormovimento.css">
 </head>
 <body>
     <?php include_once "header.php";?>

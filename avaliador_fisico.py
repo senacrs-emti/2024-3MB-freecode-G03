@@ -1,50 +1,68 @@
 from flask import Flask, render_template, Response
 import cv2
 import mediapipe as mp
+import sqlite3
+from datetime import datetime
 
 app = Flask(__name__)
 
-# Inicializando MediaPipe Pose
+# Inicializar captura de vídeo e bibliotecas
+cap = cv2.VideoCapture(0)
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose()
 mp_drawing = mp.solutions.drawing_utils
+conn = sqlite3.connect('biotipos.db', check_same_thread=False)
+cursor = conn.cursor()
 
-def avaliar_proporcoes(pontos):
-    try:
-        ombros = pontos[mp_pose.PoseLandmark.RIGHT_SHOULDER].x - pontos[mp_pose.PoseLandmark.LEFT_SHOULDER].x
-        cintura = pontos[mp_pose.PoseLandmark.RIGHT_HIP].x - pontos[mp_pose.PoseLandmark.LEFT_HIP].x
-        altura = pontos[mp_pose.PoseLandmark.NOSE].y - pontos[mp_pose.PoseLandmark.LEFT_ANKLE].y
+# Criar tabela se não existir
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS Biotipos (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        biotipo TEXT,
+        data TEXT
+    )
+''')
 
-        relacao = cintura / altura
+def calcular_proporcoes(landmarks):
+    ombro_esq = landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value]
+    ombro_dir = landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value]
+    quadril_esq = landmarks[mp_pose.PoseLandmark.LEFT_HIP.value]
+    quadril_dir = landmarks[mp_pose.PoseLandmark.RIGHT_HIP.value]
+    largura_ombros = ((ombro_dir.x - ombro_esq.x) ** 2 + (ombro_dir.y - ombro_esq.y) ** 2) ** 0.5
+    largura_quadris = ((quadril_dir.x - quadril_esq.x) ** 2 + (quadril_dir.y - quadril_esq.y) ** 2) ** 0.5
+    return largura_ombros, largura_quadris
 
-        if relacao > 0.5:
-            return "Acima do peso"
-        elif 0.4 <= relacao <= 0.5:
-            return "Peso médio"
-        else:
-            return "Magro"
-    except KeyError:
-        return "Não foi possível calcular proporções"
+def classificar_biotipo(largura_ombros, largura_quadris):
+    relacao_ombro_quadril = largura_ombros / largura_quadris
+    if relacao_ombro_quadril > 1.2:
+        return "Medio"
+    elif relacao_ombro_quadril < 1.0:
+        return "Magro"
+    else:
+        return "Acima do Peso"
 
-def gerar_frames():
-    cap = cv2.VideoCapture(0)
-    while True:
-        success, frame = cap.read()
-        if not success:
+def armazenar_biotipo(biotipo):
+    data_atual = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    cursor.execute('''
+        INSERT INTO Biotipos (biotipo, data) VALUES (?, ?)
+    ''', (biotipo, data_atual))
+    conn.commit()
+
+def gerar_stream():
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
             break
-
-        # Converta para RGB
-        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        results = pose.process(frame_rgb)
-
-        if results.pose_landmarks:
-            mp_drawing.draw_landmarks(frame, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
-            classificacao = avaliar_proporcoes(results.pose_landmarks.landmark)
-            cv2.putText(frame, f"Classificacao: {classificacao}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
-
+        image_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        result = pose.process(image_rgb)
+        if result.pose_landmarks:
+            mp_drawing.draw_landmarks(frame, result.pose_landmarks, mp_pose.POSE_CONNECTIONS)
+            largura_ombros, largura_quadris = calcular_proporcoes(result.pose_landmarks.landmark)
+            biotipo = classificar_biotipo(largura_ombros, largura_quadris)
+            armazenar_biotipo(biotipo)
+            cv2.putText(frame, f"Biotipo: {biotipo}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
         ret, buffer = cv2.imencode('.jpg', frame)
         frame = buffer.tobytes()
-
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
@@ -54,7 +72,8 @@ def index():
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(gerar_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(gerar_stream(),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
