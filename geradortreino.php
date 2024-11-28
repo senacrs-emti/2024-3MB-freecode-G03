@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="static/css/geradortreino.css">
 </head>
 <body>
-    <?php include_once "header.php" ?>
-
+    <?php include_once "headerfisico.php" ?>
 
     <main>
     <section class="gerador-treino">

@@ -43,12 +43,12 @@ $result = $conn->query($query);
         </table>
 
         <h2>Adicionar Exercício</h2>
-        <form action="adicionar_exercicio.php" method="POST" enctype="multipart/form-data">
+        <foorm action="adicionar_exercicio.php" method="POST" enctype="multipart/form-data">
             <label for="nome_exercicio">Nome do Exercício:</label>
             <input type="text" name="nome_exercicio" id="nome_exercicio" placeholder="Digite o nome do exercicio que deseja add" required>
 
 
-            <label for="descricao">Descrição:</label>
+            <label fr="descricao">Descrição:</label>
             <textarea name="descricao" id="descricao"></textarea>
 
             <label for="arquivo_midia">Arquivo de Mídia (imagem ou vídeo):</label>

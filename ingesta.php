@@ -22,15 +22,15 @@
     <main>
         <section class="diet-generator">
             <div class="diet-info">
-                <div class="pyramid">
-                    <img src="img/Ingesta.png" alt="Pirâmide Alimentar">
+                <div clamg src="img/Ingesta.png" alt="Pirâmide Alimentar">
                 </div>
                 <div class="description">
                     <h3>Pirâmide Alimentar, o que é:</h3>
                     <p>A pirâmide alimentar é uma representação gráfica que reúne informações importantes a respeito dos grupos de alimentos presentes em nossa dieta. Seu principal objetivo é garantir o bem-estar nutricional da população, informando-a, principalmente, sobre as porções recomendadas de cada tipo de alimento. Na pirâmide alimentar, os alimentos estão dispostos por nível de necessidade (base: maior necessidade/importância e topo: menor importância/necessidade), sendo eles:  
                         Primeiro nível (base da pirâmide): grupo da água; 
                         <br>
-                        Segundo nível: grupo dos cereais, tubérculos, raízes; 
+                        Segundo nível: gss="pyramid">
+                    <irupo dos cereais, tubérculos, raízes; 
                         <br>
                         Terceiro nível: grupo das hortaliças e grupo das frutas; 
                         <br>

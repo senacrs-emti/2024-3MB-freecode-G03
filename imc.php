@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="static/css/imc.css">
 </head>
 <body>
-    <?php include_once "header.php"; ?>
+    <?php include_once "headerfisico.php"; ?>
     
     <main>
         <div class="input-section">
