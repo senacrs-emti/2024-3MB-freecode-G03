@@ -30,7 +30,11 @@
                 <p>Criado no século XIX pelo matemático Lambert Quételet, o Índice de Massa Corporal (IMC) é um cálculo simples que permite medir se alguém está ou não com o peso ideal. O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado</p>
             </div>
         </div>
+        <h1>Clique Aqui Para Ir Para A Próxima Página</h1>
+        <a href="geradortreino.php"><button>--></button></a>
     </main>
+
+    
 
     <?php include_once "footer.php"; ?>
 

@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação do Físico</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
-<!--INICIO DO CABEÇALHO-->
-<header>
-    <div class="logo">
-       <a style='color:white;text-decoration:none;' href="index.php"> <h1>IA do Bem-estar</h1></a>
-    </div>
-    <div class="navegacao">
-        <div class="barra-de-pesquisa">
-            <input type="text" class="pesquisar"><ion-icon name="search-outline"></ion-icon>
+    <!--INICIO DO CABEÇALHO-->
+    <header>
+        <div class="logo">
+            <a style='color:white;text-decoration:none;' href="index.php">
+                <h1>IA do Bem-estar</h1>
+            </a>
         </div>
-    </div>
-</header>
+        <div class="navegacao">
+            <div class="barra-de-pesquisa">
+                <input type="text" class="pesquisar">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
 
-<section class="login">
-    <div class="linha"></div>
-    <div class="botao-de-login">
-        <ion-icon name="person-outline"></ion-icon>
-        <a href="register.php">FAÇA SEU LOGIN OU CADESTRE-SE</a>
-    </div>
-</section>
+    <section class="login">
+        <div class="linha"></div>
+        <div class="botao-de-login">
+            <ion-icon name="person-outline"></ion-icon>
+            <a href="register.php">FAÇA SEU LOGIN OU CADESTRE-SE</a>
+        </div>
+    </section>
 
-<main>
-    <h1>Streaming de Avaliação do Físico</h1>
-    <img src="{{ url_for('video_feed') }}" width="640" height="480">
-</main>
+    <main>
+        <h1>Streaming de Avaliação do Físico</h1>
+        <img src="{{ url_for('video_feed') }}" width="640" height="480">
+        <h1>Clique Aqui Para Ir Para A Próxima Página</h1>
+        <a href="geradortreino.php"><button>--></button></a>
+    </main>
 
-<footer>
-    <nav>
-        <ul>
-            <li><a href="https://github.com/Arthurmp07">ARTHUR MELLO</a></li>
-            <li><a href="https://github.com/GiovanaRossi">GIOVANA ROSSI</a></li>
-            <li><a href="https://github.com/CRUZ1807">HENRIQUE CRUZ</a></li>
-            <li><a href="">JOHANN DA ROSA</a></li>
-        </ul>
-    </nav>
-</footer>
+
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://github.com/Arthurmp07">ARTHUR MELLO</a></li>
+                <li><a href="https://github.com/GiovanaRossi">GIOVANA ROSSI</a></li>
+                <li><a href="https://github.com/CRUZ1807">HENRIQUE CRUZ</a></li>
+                <li><a href="">JOHANN DA ROSA</a></li>
+            </ul>
+        </nav>
+    </footer>
 
 </body>
+
 </html>
