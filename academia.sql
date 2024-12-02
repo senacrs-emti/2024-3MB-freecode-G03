@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26/11/2024 às 03:14
--- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Tempo de geração: 02/12/2024 às 04:56
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,22 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `dieta` (
   `id` int(11) NOT NULL,
   `usuario_id` int(11) NOT NULL,
+  `genero` enum('feminino','masculino') NOT NULL,
   `objetivo` enum('ganhar_peso','perder_peso') NOT NULL,
   `problema_saude` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `exercicios`
---
-
-CREATE TABLE `exercicios` (
-  `id` int(11) NOT NULL,
-  `nome_exercicio` varchar(255) NOT NULL,
-  `descricao` text DEFAULT NULL,
-  `arquivo_midia` varchar(255) NOT NULL,
-  `treino_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -93,13 +80,6 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `nome`, `genero`, `data_nascimento`, `email`, `telefone`, `senha`, `cadastro_completo`) VALUES
-(1, 'Arthur Mello Pimentel', 'masculino', '0000-00-00', 'Arthurmellopimentel76@gmail.com', '(51)992517054', '$2y$10$FbNGaudTpMV1JOVuyTw.seJybi3YznQ9P2tlqvgFm4dSLXY6bN7RG', 0);
-
---
 -- Índices para tabelas despejadas
 --
 
@@ -109,13 +89,6 @@ INSERT INTO `usuarios` (`id`, `nome`, `genero`, `data_nascimento`, `email`, `tel
 ALTER TABLE `dieta`
   ADD PRIMARY KEY (`id`),
   ADD KEY `usuario_id` (`usuario_id`);
-
---
--- Índices de tabela `exercicios`
---
-ALTER TABLE `exercicios`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `treino_id` (`treino_id`);
 
 --
 -- Índices de tabela `imc`
@@ -149,12 +122,6 @@ ALTER TABLE `dieta`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `exercicios`
---
-ALTER TABLE `exercicios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de tabela `imc`
 --
 ALTER TABLE `imc`
@@ -170,7 +137,7 @@ ALTER TABLE `treino`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restrições para tabelas despejadas
@@ -181,12 +148,6 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `dieta`
   ADD CONSTRAINT `dieta_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE;
-
---
--- Restrições para tabelas `exercicios`
---
-ALTER TABLE `exercicios`
-  ADD CONSTRAINT `exercicios_ibfk_1` FOREIGN KEY (`treino_id`) REFERENCES `treino` (`id`) ON DELETE CASCADE;
 
 --
 -- Restrições para tabelas `imc`
