@@ -1,5 +1,11 @@
 <?php
+session_start();
 
+// Dados do formulário
+$genero = $_POST['genero'] ?? '';
+$faixa_etaria = $_POST['idade'] ?? '';
+$objetivo = $_POST['objetivo'] ?? '';
+$problema_saude = $_POST['problema_saude'] ?? '';
 // Dados dos treinos
 $treinos = [
     "18-50" => [
@@ -51,24 +57,29 @@ $treinos = [
         ];
   
    
-
-        if (isset($treinos[$faixa_etaria][$objetivo])) {
-            $treino = $treinos[$faixa_etaria][$objetivo];
+        if (!empty($genero) && !empty($faixa_etaria) && !empty($objetivo)) {
+            if (isset($treinos[$faixa_etaria][$objetivo])) {
+                $treino_recomendado = $treinos[$faixa_etaria][$objetivo];
         
-            // Salvar na sessão
-            $_SESSION['treino'] = [
-                'objetivo' => $objetivo,
-                'genero' => $genero,
-                'problema_saude' => $problema_saude,
-                'recomendados' => $treino
-            ];
+                // Salvar informações na sessão
+                $_SESSION['treino'] = [
+                    'genero' => $genero,
+                    'faixa_etaria' => $faixa_etaria,
+                    'objetivo' => $objetivo,
+                    'problema_saude' => $problema_saude,
+                    'recomendados' => $treino_recomendado
+                ];
         
-            // Redirecionar para exibir o treino na página original
-            header("Location: geradortreino.php");
-            exit();
+                // Redirecionar para a página principal
+                header("Location: geradortreino.php");
+                exit();
+            } else {
+                $_SESSION['erro'] = "Nenhum treino disponível para a combinação selecionada.";
+                header("Location: geradortreino.php");
+                exit();
+            }
         } else {
-            $_SESSION['erro'] = "Nenhum treino disponível para a combinação selecionada.";
+            $_SESSION['erro'] = "Por favor, preencha todos os campos.";
             header("Location: geradortreino.php");
             exit();
         }
-        

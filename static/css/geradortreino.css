@@ -50,6 +50,24 @@
     font-weight: bold;
 }
 
+.area-treino p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.area-treino strong {
+    font-family: Arial;
+}
+
+.area-treino h4,
+h3,
+h5 {
+    font-family: Arial;
+}
+
+.area-treino li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 /* Ocultar os checkboxes */
 

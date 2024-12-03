@@ -51,7 +51,7 @@
                     <input type="radio" name="objetivo" value="ganhar_musculo" required>
                     <span class="botao objetivo-ganharmusculo">Ganhar Músculo</span>
                 </label>
-                <label>
+                <label> 
                     <input type="radio" name="objetivo" value="manter_saude" required>
                     <span class="botao objetivo-manter">Manter-se Saudável</span>
                 </label>
@@ -81,7 +81,7 @@
             echo "</ul>";
         }
 
-        unset($_SESSION['treino']); // Limpa sessão após exibir
+        unset($_SESSION['treino']); // Limpa a sessão após exibir
     } elseif (isset($_SESSION['erro'])) {
         echo "<p>" . htmlspecialchars($_SESSION['erro']) . "</p>";
         unset($_SESSION['erro']); // Limpa erro após exibir
@@ -90,6 +90,7 @@
     }
     ?>
 </div>
+
 
 
 
