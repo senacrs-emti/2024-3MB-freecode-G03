@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cálculo de IMC</title>
+    <title>Gerador Treino</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/geradortreino.css">
 </head>
 <body>
-    <?php include_once "headerfisico.php" ?>
+    <?php include_once "header.php" ?>
 
     <main>
-    <form method="POST" action="processar_treino.php">
+    <section class="gerador-treino">
+        <h2>Gerador de treino</h2>
+
+        <form method="POST" action="processar_treino.php">
             <p>Escolha o seu gênero:</p>
             <div class="opcoes-genero">
                 <label>
@@ -60,12 +63,39 @@
         </form>
 
         <div class="area-treino">
-            <h3>Treino</h3>
-            <p>Aqui será exibido o treino gerado com base nas suas escolhas.</p>
-        </div>
-        <form id="form-treino" action="processar_treino.php" method="POST">
+    <h3>Treino Gerado</h3>
+    <?php
+    session_start();
+    if (isset($_SESSION['treino'])) {
+        $treino = $_SESSION['treino'];
+        echo "<p><strong>Objetivo:</strong> " . htmlspecialchars($treino['objetivo']) . "</p>";
+        echo "<p><strong>Gênero:</strong> " . htmlspecialchars($treino['genero']) . "</p>";
+        echo "<p><strong>Problema de Saúde:</strong> " . htmlspecialchars($treino['problema_saude']) . "</p>";
+
+        echo "<h4>Treinos Recomendados:</h4>";
+        foreach ($treino['recomendados'] as $categoria => $exercicios) {
+            echo "<h5>" . htmlspecialchars($categoria) . "</h5><ul>";
+            foreach ($exercicios as $exercicio) {
+                echo "<li>" . htmlspecialchars($exercicio) . "</li>";
+            }
+            echo "</ul>";
+        }
+
+        unset($_SESSION['treino']); // Limpa sessão após exibir
+    } elseif (isset($_SESSION['erro'])) {
+        echo "<p>" . htmlspecialchars($_SESSION['erro']) . "</p>";
+        unset($_SESSION['erro']); // Limpa erro após exibir
+    } else {
+        echo "<p>Aqui será exibido o treino gerado com base nas suas escolhas.</p>";
+    }
+    ?>
+</div>
+
+
+
     </section>
 </main>
+
 
 
     <?php include_once "footer.php" ?>

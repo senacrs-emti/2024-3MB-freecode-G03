@@ -41,11 +41,13 @@
 }
 
 .area-dieta {
-    background: linear-gradient(to bottom, #FF8C00, #FF4500);
+    background: linear-gradient(to bottom, red, red);
     padding: 20px;
     border-radius: 12px;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 
@@ -141,52 +143,42 @@
 }
 
 
-/* Estilos para quando o checkbox está marcado */
+/* Ajustar animação de ampliação */
 
-.objetivo-checkbox:checked+.objetivo-ganhar {
-    background-color: #8B0000;
-    box-shadow: 0px 4px 12px rgba(139, 0, 0, 0.3);
-    transform: scale(1.05);
-}
-
-.objetivo-checkbox:checked+.objetivo-perder {
-    background-color: #FFA000;
-    box-shadow: 0px 4px 12px rgba(255, 160, 0, 0.3);
-    transform: scale(1.05);
-}
-
-.objetivo-checkbox:checked+.objetivo-ganharmusculo {
-    background-color: #8B0000;
-    box-shadow: 0px 4px 12px rgba(139, 0, 0, 0.3);
-    transform: scale(1.05);
-}
-
-.objetivo-checkbox:checked+.objetivo-manter {
-    background-color: #FFA000;
-    box-shadow: 0px 4px 12px rgba(255, 160, 0, 0.3);
-    transform: scale(1.05);
-}
-
-.idade-checkbox:checked+.jovem-adulto {
-    background-color: #8B0000;
-    box-shadow: 0px 4px 12px rgba(139, 0, 0, 0.3);
-    transform: scale(1.05);
-}
-
-.idade-checkbox:checked+.adulto-idoso {
-    background-color: #FFA000;
-    box-shadow: 0px 4px 12px rgba(255, 160, 0, 0.3);
-    transform: scale(1.05);
-}
-
-.genero-checkbox:checked+.masculino {
-    background-color: #8B0000;
-    box-shadow: 0px 4px 12px rgba(139, 0, 0, 0.3);
-    transform: scale(1.05);
-}
-
+.objetivo-checkbox:checked+.objetivo-ganhar,
+.objetivo-checkbox:checked+.objetivo-perder,
+.objetivo-checkbox:checked+.objetivo-ganharmusculo,
+.objetivo-checkbox:checked+.objetivo-manter,
+.idade-checkbox:checked+.jovem-adulto,
+.idade-checkbox:checked+.adulto-idoso,
+.genero-checkbox:checked+.masculino,
 .genero-checkbox:checked+.feminino {
-    background-color: #FFA000;
-    box-shadow: 0px 4px 12px rgba(255, 160, 0, 0.3);
-    transform: scale(1.05);
+    background-color: #8B0000;
+    /* Cor específica */
+    box-shadow: 0px 4px 15px rgba(139, 0, 0, 0.3);
+    /* Brilho ajustado */
+    transform: scale(1.03);
+    /* Ampliação mais sutil */
+    transition: all 0.25s ease-in-out;
+    /* Animação mais fluida */
+}
+
+
+/* Hover para melhorar interatividade */
+
+.objetivo-ganhar,
+.objetivo-perder,
+.objetivo-ganharmusculo,
+.objetivo-manter,
+.jovem-adulto,
+.adulto-idoso,
+.masculino,
+.feminino {
+    transform: scale(1.02);
+    /* Pequeno zoom ao passar o mouse */
+    transition: transform 0.2s ease-in-out;
+}
+
+.area-dieta li {
+    list-style-type: none;
 }

@@ -63,40 +63,33 @@
         </form>
 
         <div class="area-dieta">
-    <h3>Dieta</h3>
+    <h3>Dieta Gerada</h3>
     <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['gerar_dieta'])) {
-        // Conexão com o banco de dados
-        $pdo = new PDO("mysql:host=localhost;dbname=academia", "root", "");
-
-        // Captura os dados do formulário
-        $objetivo = $_POST['objetivo'];
-        $problema_saude = $_POST['problema_saude'];
-        $genero = $_POST['genero'];
-
-        // Exemplo de geração de dieta
-        try {
-            $stmt = $pdo->prepare("SELECT * FROM dieta WHERE objetivo = :objetivo AND genero = :genero");
-            $stmt->bindParam(':objetivo', $objetivo);
-            $stmt->bindParam(':genero', $genero);
-            $stmt->execute();
-            $dieta = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            if ($dieta) {
-                echo "<p>Objetivo: " . htmlspecialchars($dieta['objetivo']) . "</p>";
-                echo "<p>Gênero: " . htmlspecialchars($dieta['genero']) . "</p>";
-                echo "<p>Problema de Saúde: " . htmlspecialchars($dieta['problema_saude']) . "</p>";
-            } else {
-                echo "<p>Nenhuma dieta encontrada para as opções selecionadas.</p>";
-            }
-        } catch (PDOException $e) {
-            echo "<p>Erro ao buscar dieta: " . $e->getMessage() . "</p>";
+    session_start();
+    if (isset($_SESSION['dieta'])) {
+        $dieta = $_SESSION['dieta'];
+        echo "<p><strong>Objetivo:</strong> " . htmlspecialchars($dieta['objetivo']) . "</p>";
+        echo "<p><strong>Gênero:</strong> " . htmlspecialchars($dieta['genero']) . "</p>";
+        echo "<p><strong>Problema de Saúde:</strong> " . htmlspecialchars($dieta['problema_saude']) . "</p>";
+        echo "<h4>Alimentos Recomendados:</h4><ul>";
+        foreach ($dieta['recomendados'] as $item) {
+            echo "<li>" . htmlspecialchars($item) . "</li>";
         }
+        echo "</ul><h4>Alimentos a Evitar:</h4><ul>";
+        foreach ($dieta['evitar'] as $item) {
+            echo "<li>" . htmlspecialchars($item) . "</li>";
+        }
+        echo "</ul>";
+        unset($_SESSION['dieta']); // Limpa sessão após exibir
+    } elseif (isset($_SESSION['erro'])) {
+        echo "<p>" . htmlspecialchars($_SESSION['erro']) . "</p>";
+        unset($_SESSION['erro']); // Limpa erro após exibir
     } else {
         echo "<p>Aqui será exibida a dieta gerada com base nas suas escolhas.</p>";
     }
     ?>
 </div>
+
 
     </section>
 </main>

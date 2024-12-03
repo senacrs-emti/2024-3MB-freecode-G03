@@ -49,36 +49,30 @@ $dietas = [
         ];
    
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $genero = $_POST['genero'];
-    $faixa_etaria = $_POST['idade'];
-    $objetivo = $_POST['objetivo'];
-    $problema_saude = $_POST['problema_saude'];
-
-    // Validar inputs
-    if (isset($dietas[$faixa_etaria][$objetivo])) {
-        $dieta = $dietas[$faixa_etaria][$objetivo];
-
-        echo "<h3>Alimentos recomendados=></h3><ul>";
-        foreach ($dieta['consumir'] as $alimento) {
-            echo "<li>$alimento</li>";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $genero = $_POST['genero'];
+            $faixa_etaria = $_POST['idade'];
+            $objetivo = $_POST['objetivo'];
+            $problema_saude = $_POST['problema_saude'];
+        
+            if (isset($dietas[$faixa_etaria][$objetivo])) {
+                $dieta = $dietas[$faixa_etaria][$objetivo];
+        
+                // Salvar na sessão
+                $_SESSION['dieta'] = [
+                    'objetivo' => $objetivo,
+                    'genero' => $genero,
+                    'problema_saude' => $problema_saude,
+                    'recomendados' => $dieta['consumir'],
+                    'evitar' => $dieta['evitar']
+                ];
+        
+                // Redirecionar para exibir a dieta na página original
+                header("Location: geradordieta.php");
+                exit();
+            } else {
+                $_SESSION['erro'] = "Nenhuma dieta disponível para a combinação selecionada.";
+                header("Location: geradordieta.php");
+                exit();
+            }
         }
-        echo "</ul>";
-
-        echo "<h3>Alimentos a evitar=></h3><ul>";
-        foreach ($dieta['evitar'] as $alimento) {
-            echo "<li>$alimento</li>";
-        }
-        echo "</ul>";
-
-        // Salvar no banco de dados
-        $stmt = $pdo->prepare("INSERT INTO dieta (usuario_id, objetivo, problema_saude, genero) VALUES (?, ?, ?, ?)");
-        if ($stmt->execute([$usuario_id, $objetivo, $problema_saude, $genero])) {
-            echo "Dieta registrada com sucesso!";
-        } else {
-            echo "Erro ao registrar dieta.";
-        }
-    } else {
-        echo "Nenhuma dieta disponível para a combinação selecionada.";
-    }
-}
