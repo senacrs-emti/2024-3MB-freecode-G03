@@ -50,12 +50,20 @@
     font-weight: bold;
 }
 
-.area-treino p {
+.area-treino p,
+.area-treino h4 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 406px;
     font-family: Arial, Helvetica, sans-serif;
+    /* Define o espaço entre o strong e o restante */
 }
 
 .area-treino strong {
-    font-family: Arial;
+    margin-right: 0;
+    /* Remove qualquer margem extra */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .area-treino h4,

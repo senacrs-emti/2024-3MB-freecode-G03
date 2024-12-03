@@ -44,6 +44,10 @@ main {
     margin-top: 1.5rem;
 }
 
+.categoria {
+    font-size: 1.8rem;
+}
+
 .right-section {
     display: flex;
     flex-direction: column;

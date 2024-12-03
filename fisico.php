@@ -8,7 +8,7 @@
    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <?php include_once "headerfisico.php"?>
+    <?php include_once "header.php"?>
     <div class="container">
         <div class="menu">
             

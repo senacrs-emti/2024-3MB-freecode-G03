@@ -11,7 +11,7 @@
             <nav>
                 <a href="fisico.php">Fisico</a>
                 <a href="mental.php">Mental</a>
-                <a href="ingesta.php">Injesta</a>
+                <a href="ingesta.php">Ingesta</a>
 
             </nav>
         </div>
