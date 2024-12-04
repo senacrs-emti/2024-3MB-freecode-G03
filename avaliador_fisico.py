@@ -47,6 +47,13 @@ def calcular_proporcoes(landmarks, frame_width):
     return largura_ombros_cm, largura_quadris_cm
 
 def classificar_biotipo(largura_ombros, largura_quadris):
+    # Verificar as condições baseadas na largura dos ombros
+    if largura_ombros > 35:
+        return "Acima do Peso"
+    elif largura_ombros < 32:
+        return "Magro"
+    
+    # Se a largura dos ombros estiver entre 32 e 35 cm, realizar a análise padrão
     relacao_ombro_quadril = largura_ombros / largura_quadris
     if relacao_ombro_quadril > 1.2:
         return "Medio"
@@ -76,7 +83,7 @@ def gerar_stream():
             largura_ombros, largura_quadris = calcular_proporcoes(result.pose_landmarks.landmark, frame_width)
             biotipo = classificar_biotipo(largura_ombros, largura_quadris)
             armazenar_avaliacao(biotipo, largura_ombros, largura_quadris)
-            cv2.putText(frame, f"Avaliaçao fisica: {biotipo}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.putText(frame, f"Avalicao fisica: {biotipo}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             cv2.putText(frame, f"Ombros: {largura_ombros:.1f} cm, Cintura: {largura_quadris:.1f} cm",
                         (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 0), 2)
         ret, buffer = cv2.imencode('.jpg', frame)
