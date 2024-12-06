@@ -1,4 +1,35 @@
-<link rel="stylesheet" href="static/css/style.css">
+<style>
+    footer {
+    width: 100%;
+    background-color: #B50909;
+    height: 200px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+footer .logosection {
+    margin-top: -60px;
+    float: right;
+    margin-right: 200px;
+}
+
+footer .logosection img {
+    width: 100px;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/*fim footer*/
+</style>
 <footer>
     <nav>
         <ul>
