@@ -20,7 +20,7 @@
          <a href="fisico.php">
         <div class="card card-fisico">
             <h2>FÍSICO</h2>
-            <img src="img/Fisico.png" alt="Ícone Físico">
+            <img src="img/Fisico2.png" width="100px" height="205px"  alt="Ícone Físico">
             <p>O bem-estar físico é definido como a capacidade de realizar atividades físicas e desempenhar papéis sociais sem limitações físicas ou experiências de dor corporal e indicadores de saúde biológicos. </p>
         </div>
         </a>
@@ -28,7 +28,7 @@
          <a href="mental.php">
         <div class="card card-mental">
             <h2>MENTAL</h2>
-            <img src="img/Mental.png" alt="Ícone Mental">
+            <img src="img/Mental2.png" style="padding-bottom: 23.5px;" alt="Ícone Mental">
             <p>É um estado de bem-estar no qual o indivíduo é capaz de usar suas próprias habilidades para se recuperar do estresse rotineiro, para ser produtivo e contribuir com sua comunidade.   </p>
         </div>
         </a>
@@ -36,7 +36,7 @@
          <a href="ingesta.php">
         <div class="card card-ingesta">
             <h2>INGESTA</h2>
-            <img src="img/Ingesta.png" alt="Ícone Ingesta">
+            <img src="img/Ingesta.png"  alt="Ícone Ingesta">
             <p>Uma alimentação saudável é aquela que garante o fornecimento de todos os nutrientes necessários para o funcionamento do corpo. A alimentação saudável é essencial para o bem-estar do corpo humano no geral.  </p>
         </div>
         </a>

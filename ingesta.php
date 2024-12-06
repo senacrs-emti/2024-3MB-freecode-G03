@@ -13,9 +13,9 @@
     <!-- Botão "Gerador de Dieta" separado na parte superior -->
     <section class="diet-button">
         <a href="geradordieta.php" class="diet-link">
-            <div class="icon"><ion-icon name="restaurant-outline"></ion-icon></div>
+            <div class="icon"><ion-icon name="restaurant-outline"><img src="img/Ingesta.png" width="50px" alt=""></ion-icon></div>
             <span>Gerador de Dieta</span>
-            <div class="icon"><ion-icon name="restaurant-outline"></ion-icon></div>
+            <div class="icon"><ion-icon name="restaurant-outline"><img src="img/Ingesta.png" width="50px" alt=""></ion-icon></div>
         </a>
     </section>
     

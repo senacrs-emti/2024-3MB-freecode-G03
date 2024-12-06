@@ -15,25 +15,25 @@
             <h2>Selecione uma opção:</h2>
             <div class="menu-item imc">
             <a href="imc.php">
-            <span class="card-text" style="font-size: 45px;">IMC</span>
-            <span class="card-subtext">Cálculo de IMC</span>
+            <span><img style="width: 100px; height: 100px;" src="img/imc.png" alt="Ícone de movimento"></span>
+            <span class="card-text">Cálculo de IMC</span>
             </a>
         </div>
         <div class="menu-item verificador">
             <a href="verificadormovimento.php">
-            <span><img style="width: 100px; height: 100px;" src="img/halter.png" alt="Ícone de movimento"></span>
+            <span><img style="width: 130px; height: auto;" src="img/halter2.png" alt="Ícone de movimento"></span>
             <span class="card-text">Verificador de movimento</span>
             </a>
         </div>
         <div class="menu-item treino">
             <a href="geradortreino.php">
-            <span><img style="width: 100px; height: 100px;" src="img/braco.png" alt="Ícone de treino"></span>
+            <span><img style="width: 100px; height: 100px;" src="img/geradorfisico.png" alt="Ícone de treino"></span>
             <span class="card-text">Gerador de Treino</span>
             </a>
         </div>
         <div class="menu-item avaliador">
-            <a href="avaliadorfisico.php">
-        <span><img style="width: 100px; height: 100px;" src="img/shape.png" alt="Ícone de avaliador"></span>
+            <a href="http://127.0.0.1:5000/">
+        <span><img style="width: 100px; height: 100px;" src="img/Fisico2.png" alt="Ícone de avaliador"></span>
         <span class="card-text">Avaliador de Físico</span>
         </a>
         </div>
