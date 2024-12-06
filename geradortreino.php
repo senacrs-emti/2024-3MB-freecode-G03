@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -65,7 +66,7 @@
         <div class="area-treino">
     <h3>Treino Gerado</h3>
     <?php
-    session_start();
+    
     if (isset($_SESSION['treino'])) {
         $treino = $_SESSION['treino'];
         echo "<p><strong>Objetivo:</strong> " . htmlspecialchars($treino['objetivo']) . "</p>";

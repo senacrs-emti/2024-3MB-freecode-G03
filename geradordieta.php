@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -66,7 +67,7 @@
         <div class="area-dieta">
     <h3>Dieta Gerada</h3>
     <?php
-    session_start();
+   
     if (isset($_SESSION['dieta'])) {
         $dieta = $_SESSION['dieta'];
         echo "<p><strong>Objetivo:</strong> " . htmlspecialchars($dieta['objetivo']) . "</p>";
