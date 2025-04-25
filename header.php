@@ -29,7 +29,8 @@ header .barra-de-pesquisa {
     background-color: white;
     border-radius: 26px;
     margin-bottom: 1.2rem;
-    margin-top: 20px;
+    margin-top: 19px;
+
 }
 
 header .navegacao input {
